@@ -1,27 +1,72 @@
-# Frontend
+🏨 The Gallery Hotel - Frontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.1.
+Interface administrativa e de usuário para o sistema de gestão hoteleira The Gallery Hotel. Este projeto foi construído com foco em performance, componentização moderna e experiência de usuário fluida.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+🚀 Tecnologias e Decisões Técnicas
 
-## Code scaffolding
+Este projeto utiliza o que há de mais moderno no ecossistema Angular:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Angular 18: Uso de Standalone Components para uma arquitetura mais leve e modular, eliminando a necessidade de NgModules complexos.
 
-## Build
+Gestão de Estado & Reatividade: Implementação de Signals (nova API do Angular) para uma detecção de mudanças mais eficiente e declarativa.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Roteamento Avançado: Configuração de rotas lazy-loaded para otimizar o bundle inicial.
 
-## Running unit tests
+Consumo de API: Centralização de chamadas via HttpClient com tipagem forte através de interfaces TypeScript.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+UI/UX: Estilização modular com suporte a responsividade.
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+🛠️ Funcionalidades Principais
 
-## Further help
+Dashboard Administrativo: Visualização geral do status do hotel.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Gestão de Quartos: Listagem, criação e edição de acomodações.
+
+Controle de Hóspedes: Interface para gerenciamento de clientes.
+
+Sistema de Reservas: Fluxo completo para agendamento de estadias.
+
+Integração de Localização: Mapa integrado para exibição da unidade.
+
+
+📂 Estrutura do Projeto
+
+A arquitetura segue o padrão de Core/Shared/Features, garantindo escalabilidade:
+
+src/
+ ├── app/
+ │    ├── components/    # Componentes reutilizáveis (UI)
+ │    ├── pages/         # Views principais (Dashboard, Rooms, etc.)
+ │    ├── services/      # Lógica de negócio e comunicação com API
+ │    ├── models/        # Interfaces e Tipagens (DTOs)
+ │    └── app.routes.ts  # Configuração de roteamento (Lazy Loading)
+ └── assets/             # Recursos estáticos (imagens, ícones)
+
+ 
+🔧 Instalação e Execução
+
+Para rodar este projeto localmente, você precisará do Node.js (recomendado v18+) e do Angular CLI.
+
+Clone o repositório:
+
+git clone https://github.com/matheus-aloisio-lehnen/the-gallery-hotel-frontend.git
+
+
+Instale as dependências:
+
+npm install
+
+Inicie o servidor de desenvolvimento:
+
+ng serve
+
+Acesse http://localhost:4200 no seu navegador.
+
+
+🧪 Comandos Úteis
+
+Build de Produção: ng build (Gera os arquivos na pasta dist/).
+
+Testes Unitários: ng test (Executa via Karma).
